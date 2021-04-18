@@ -1,0 +1,7 @@
+https://en.wikipedia.org/wiki/Message_Passing_Interface
+
+mpi4py: https://mpi4py.readthedocs.io/en/stable/tutorial.html
+
+solve error while installations: https://stackoverflow.com/questions/28440834/error-when-installing-mpi4py
+	sudo apt install libopenmpi-dev
+	pip install mpi4py
