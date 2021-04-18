@@ -77,5 +77,10 @@
 			"path": "."
 		}
 	],
+	// https://stackoverflow.com/questions/39774317/disable-anaconda-on-all-files-of-a-directory
+	 // "settings": {
+  //       "anaconda_linting": false,
+  //       "disable_anaconda_completion": true,
+  //   },
 	"python_interpreter": "/home/bruno/Documents/dev/learning-distributed-systems/venv-learning-distributed-systems/bin/python"
 }
