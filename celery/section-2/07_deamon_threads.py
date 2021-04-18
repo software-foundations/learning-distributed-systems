@@ -23,7 +23,7 @@ class ProducerThread(threading.Thread):
 				print("Space in quere, Consumer notified producer")
 			number = random.choice(numbers)
 			queue.append(number)
-			print("Producer {}".format(number))
+			print("Produced {}".format(number))
 			condition.notify()
 			condition.release()
 			time.sleep(random.random())
@@ -41,7 +41,7 @@ class ConsumerThread(threading.Thread):
 				print("Producer added something to quere and notify the consumer")
 
 			number = queue.pop(0)
-			print("Consumer {}".format(number))
+			print("Consumed {}".format(number))
 			condition.notify()
 			condition.release()
 			time.sleep(random.random())
