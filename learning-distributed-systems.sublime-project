@@ -68,7 +68,7 @@
 			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
 			"name": "Anaconda Python Builder",
 			"selector": "source.python",
-			"shell_cmd": "\"/home/bruno/Documents/dev/learning-data-science/venv-learning-data-science/bin/python\" -u \"$file\""
+			"shell_cmd": "\"/home/bruno/Documents/dev/ecosim/venv-ecosim/bin/python\" -u \"$file\""
 		}
 	],
 	"folders":
@@ -77,15 +77,8 @@
 			"path": "."
 		}
 	],
-	// https://stackoverflow.com/questions/39774317/disable-anaconda-on-all-files-of-a-directory
-	 "settings": {
-        // "anaconda_linting": false,
-        // "disable_anaconda_completion": true,
-        /*
-       	If this is set to true, anaconda will show errors inline.
-    	*/
-    	// "anaconda_linter_phantoms": true,
-
-    },
-	"python_interpreter": "/home/bruno/Documents/dev/learning-distributed-systems/venv-learning-distributed-systems/bin/python"
+	"python_interpreter": "/home/bruno/Documents/dev/learning-distributed-systems/venv-learning-distributed-systems/bin/python",
+	"settings":
+	{
+	}
 }
