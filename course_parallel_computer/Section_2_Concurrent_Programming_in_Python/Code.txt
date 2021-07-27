@@ -1,0 +1,4 @@
+https://github.com/BignumWorks/Packt-Concurrent-Programming-in-Python
+
+NOTE: Code Examples and data sets for this video Course use Python 3.6.x or above.
+Your experience with lower versions might be unpredictable.
