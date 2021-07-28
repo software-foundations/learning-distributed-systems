@@ -1,5 +1,5 @@
 import threading
-from tqdm import tqdm
+from tqdm import trange
 from time import sleep
 
 
@@ -20,21 +20,21 @@ def target_function():
 
 		print(f'\n{thread_name} -> waiting the source be avaliable')
 
-	with lock:
+	lock.acquire(blocking=False)
 
-		print(f'\n{thread_name} -> aquire the lock')
+	print(f'\n{thread_name} -> aquire the lock')
 
-		print(f'\n{thread_name} -> acessing resource')
+	print(f'\n{thread_name} -> acessing resource')
 
-		for i in tqdm(range(3)):
+	for i in trange(3):
 
-			resource.append(str(i) + '_' + thread_name)
+		resource.append(str(i) + '_' + thread_name)
 
-			sleep(1)
+		sleep(1)
 
-		print(resource)
+	print(resource)
 
-		print(f'\n{thread_name} -> releasing resource')	
+	print(f'\n{thread_name} -> releasing resource')
 	
 		
 thread_01 = threading.Thread(name='t1', target=target_function)

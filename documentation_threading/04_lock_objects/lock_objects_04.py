@@ -1,7 +1,9 @@
 import threading
-from tqdm import tqdm
+from tqdm import trange
 from time import sleep
 
+# TIMEOUT_LOCK: float = 4
+TIMEOUT_LOCK: float = 0.5
 
 lock = threading.Lock()
 
@@ -20,21 +22,28 @@ def target_function():
 
 		print(f'\n{thread_name} -> waiting the source be avaliable')
 
-	with lock:
+	lock.acquire(timeout=TIMEOUT_LOCK)
 
-		print(f'\n{thread_name} -> aquire the lock')
+	print(f'\n{thread_name} -> aquire the lock')
 
-		print(f'\n{thread_name} -> acessing resource')
+	print(f'\n{thread_name} -> acessing resource')
 
-		for i in tqdm(range(3)):
+	for i in trange(3):
 
-			resource.append(str(i) + '_' + thread_name)
+		resource.append(str(i) + '_' + thread_name)
 
-			sleep(1)
+		sleep(1)
 
-		print(resource)
+	print(resource)
 
-		print(f'\n{thread_name} -> releasing resource')	
+	print(f'\n{thread_name} -> releasing resource')
+
+	try:
+		lock.release()
+
+	except RuntimeError as e:
+		print(thread_name, e)
+		print('ignored!')
 	
 		
 thread_01 = threading.Thread(name='t1', target=target_function)
