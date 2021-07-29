@@ -42,7 +42,7 @@ def target_function():
 		lock.release()
 
 	except RuntimeError as e:
-		print(thread_name, e)
+		print(thread_name, e, '-> invoked on an unlocked lock')
 		print('ignored!')
 	
 		
