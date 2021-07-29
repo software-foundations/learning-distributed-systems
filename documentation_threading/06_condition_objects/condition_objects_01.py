@@ -7,7 +7,7 @@ queue_resource = Queue()
 
 condition = threading.Condition(lock=threading.Lock())
 
-def producer() -> None:
+def producer() -> None:	
 
 	condition.acquire()
 
