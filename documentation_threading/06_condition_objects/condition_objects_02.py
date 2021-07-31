@@ -25,9 +25,9 @@ def consumer() -> None:
 
     condition.acquire()
 
-    condition.wait(timeout=2)
-
     print(f'{threading.current_thread().name} -> waiting')
+
+    condition.wait(timeout=2)
 
     print(f'{threading.current_thread().name} -> {resource_queue.get()} consumed')
 
