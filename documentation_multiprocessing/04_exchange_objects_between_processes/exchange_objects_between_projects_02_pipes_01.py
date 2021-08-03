@@ -1,12 +1,12 @@
 import multiprocessing as mp
-
+from multiprocessing.connection import Connection
 from time import sleep
 
 
 # The Pipe() function returns a pair of connection objects connected by a pipe 
 # which by default is duplex (two-way)
 
-def target_function(connection) -> None:
+def target_function(connection: Connection) -> None:
 
 	sleep(2)
 
