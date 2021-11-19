@@ -5,13 +5,13 @@
 			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
 			"name": "learning distributed systems",
 			"selector": "source.python",
-			"shell_cmd": "\"/home/bruno/Documents/dev/learning-distributed-systems/venv-39-learning-distributed-systems/bin/python\" -u \"$file\""
+			"shell_cmd": "\"/home/bruno/Documents/dev/learning-distributed-systems/venv-39-learning-distributed-systems/bin/python\" -u \"$file\"",
 		},
 		{
 			"auto_close": false,
 			"env":
 			{
-				"PYTHONIOENCODING": "utf-8"
+				"PYTHONIOENCODING": "utf-8",
 			},
 			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
 			"focus": true,
@@ -21,7 +21,7 @@
 				[
 					"carry_file_to_pane",
 					{
-						"direction": "right"
+						"direction": "right",
 					}
 				]
 			],
@@ -34,16 +34,16 @@
 			[
 				{
 					"name": "Syntax Check",
-					"shell_cmd": "\"/home/bruno/Documents/dev/learning-distributed-systems/venv-39-learning-distributed-systems/bin/python\" -m py_compile \"${file}\""
+					"shell_cmd": "\"/home/bruno/Documents/dev/learning-distributed-systems/venv-39-learning-distributed-systems/bin/python\" -m py_compile \"${file}\"",
 				}
 			],
-			"working_dir": "$file_path"
+			"working_dir": "$file_path",
 		},
 		{
 			"auto_close": false,
 			"env":
 			{
-				"PYTHONIOENCODING": "utf-8"
+				"PYTHONIOENCODING": "utf-8",
 			},
 			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
 			"focus": true,
@@ -53,7 +53,7 @@
 				[
 					"carry_file_to_pane",
 					{
-						"direction": "right"
+						"direction": "right",
 					}
 				]
 			],
@@ -62,23 +62,23 @@
 			"target": "terminus_open",
 			"timeit": true,
 			"title": "ipython",
-			"working_dir": "$file_path"
+			"working_dir": "$file_path",
 		},
 		{
 			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
 			"name": "Anaconda Python Builder",
 			"selector": "source.python",
-			"shell_cmd": "\"/home/bruno/Documents/dev/ecosim/venv-39-ecosim/bin/python\" -u \"$file\""
+			"shell_cmd": "\"/home/bruno/Documents/dev/learning-distributed-systems/venv-39-learning-distributed-systems/bin/python\"",
 		}
 	],
 	"folders":
 	[
 		{
-			"path": "."
+			"path": ".",
 		}
 	],
 	"python_interpreter": "/home/bruno/Documents/dev/learning-distributed-systems/venv-39-learning-distributed-systems/bin/python",
 	"settings":
 	{
-	}
+	},
 }
