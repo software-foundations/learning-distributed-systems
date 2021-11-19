@@ -3,16 +3,16 @@ import asyncio
 
 async def get_input() -> None:
 
-	enter = input('say something: ')	
+    enter = input('say something: ')    
 
-	print(f'you say {enter}')
+    print(f'you say {enter}')
 
 async def main():
 
-	print('Hello')	
+    print('Hello')  
 
-	await get_input()
+    await get_input()
 
-	print('End!')
+    print('End!')
 
 asyncio.run(main())

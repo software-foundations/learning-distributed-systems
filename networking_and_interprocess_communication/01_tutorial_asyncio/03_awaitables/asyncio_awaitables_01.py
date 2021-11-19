@@ -15,22 +15,22 @@ import asyncio
 
 async def coroutine_2() -> None:
 
-	print('coroutine 2 starts')
+    print('coroutine 2 starts')
 
-	await asyncio.sleep(2)	
+    await asyncio.sleep(2)
 
 async def coroutine_1() -> None:
 
-	print('coroutine 1 starts')
+    print('coroutine 1 starts')
 
-	await coroutine_2()
+    await coroutine_2()
 
-	print('coroutine 2 ends')
+    print('coroutine 2 ends')
 
 async def main() -> None:
 
-	await coroutine_1()
+    await coroutine_1()
 
-	print('coroutine 1 ends')
+    print('coroutine 1 ends')
 
 asyncio.run(main())

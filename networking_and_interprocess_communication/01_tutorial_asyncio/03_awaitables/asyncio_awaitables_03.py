@@ -11,18 +11,21 @@ from time import sleep
 
 async def coroutine(iteration: int) -> None:
 
-	print(f'coroutine {iteration} starts')	
+    print(f'coroutine {iteration} starts')  
 
 async def main() -> None:
 
-	print('main starts')
+    print('main starts')
 
-	for i in range(20):
+    for i in range(20):
 
-		task = asyncio.create_task(coro=coroutine(iteration=i))
+        # "task" can now be used to cancel "voroutine()", or
+        # can simply be awaited to wait until it is complete:
 
-		await task
+        task = asyncio.create_task(coro=coroutine(iteration=i))
 
-		print(f'coroutine {i} ends')
+        await task
+
+        print(f'coroutine {i} ends')
 
 asyncio.run(main())

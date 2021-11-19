@@ -4,14 +4,14 @@ import asyncio
 
 async def some_processing() -> None:
 
-	print('start processing')
+    print('start processing')
 
-	await asyncio.sleep(3)	
+    await asyncio.sleep(3)
 
 async def main():
 
-	await some_processing()
+    await some_processing()
 
-	print('Processed')
+    print('Processed')
 
 asyncio.run(main())
